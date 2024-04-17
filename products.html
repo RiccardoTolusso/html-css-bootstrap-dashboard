@@ -114,8 +114,54 @@
             </div>
         </div>
 
-        <div class="main-content bg-primary w-100 vh-100">
+        <!-- MAIN CONTENT CONTAINER -->
+        <div class="main-content w-100 vh-100 p-3">
+            <!-- TITLE SECTION WITH BUTTONS -->
+            <div class="d-flex justify-content-between align-items-center pb-3 border-bottom mb-4">
+                <h2 class="flex-shrink-0 fw-semibold">10 prodotti trovati</h2>
+                <div>
+                    <div class="btn-group" role="group" aria-label="Basic example">
+                        <button type="button" class="btn btn-outline-secondary">Esporta</button>
+                        <button type="button" class="btn btn-outline-secondary">Nuovo</button>
+                    </div>
+                </div>
+            </div>
 
+            <!-- TABLE -->
+            <table>
+                <thead>
+                    <tr>
+                        <th class="w-100">Nome</th>
+                        <th class="pe-2 ps-2">Prezzo</th>
+                        <th class="pe-2 ps-2">Stato</th>
+                        <th class="pe-2 ps-2">Azioni</th>
+                    </tr>
+                </thead>
+
+                <tbody class="text-center">
+                    <tr>
+                        <td class="text-start d-flex align-items-center">
+                            <!-- foto con testo -->
+                            <div>
+                                <img src="https://picsum.photos/60" alt="">
+                            </div>
+                            <div>
+                                <div>Samsung</div>
+                                <span>Display amoled</span>
+                            </div>
+                        </td>
+                        <td>
+                            Prezzo
+                        </td>
+                        <td>
+                            Stato
+                        </td>
+                        <td>
+                            Azioni
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
         </div>
     </main>
 
