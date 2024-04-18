@@ -125,53 +125,103 @@
 
             <!-- FORM -->
             <form action="POST">
-                <!-- input nome -->
-                <div class="mb-3 d-flex flex-wrap flex-md-nowrap">
-                    <span class="w-50 mb-1">Nome</span>
-                    <input type="text" class="w-100 form-control text-secondary">
-                </div>
+                <div class="container-fluid">
+                    <div class="row row-cols-1 row-cols-lg-2">
+                        <!-- left column -->
+                        <div class="col mb-3">
+                            <!-- input nome -->
+                            <div class="mb-3 d-flex flex-wrap flex-md-nowrap">
+                                <span class="w-50 mb-1">Nome *</span>
+                                <input type="text" class="w-100 form-control text-secondary" required>
+                            </div>
+            
+                            <!-- input prezzo -->
+                            <div class="mb-3 d-flex flex-wrap flex-md-nowrap">
+                                <span class="w-50 mb-1">Prezzo *</span>
+                                <input type="text" class="w-100 form-control text-secondary" required>
+                            </div>
+                            
+                            <!-- input marca -->
+                            <div class="mb-3 d-flex flex-wrap flex-md-nowrap">
+                                <span class="w-50 mb-1">Marca</span>
+                                <select class="w-100 form-select" >
+                                    <option selected>--- Seleziona ---</option>
+                                    <option value="1">Samsung</option>
+                                    <option value="2">Apple</option>
+                                    <option value="3">Huawey</option>
+                                </select>
+                            </div>
+            
+                            <!-- description textarea -->
+                            <textarea class="form-control mb-3" id="description" rows="4" placeholder="Inserisci la descrizione del prodotto, massimo 1000 caratteri"></textarea>
+            
+                            <!-- file input -->
+                            <div class="input-group mb-3">                    
+                                <input class="form-control" type="file" id="formFile" accept=".png">
+                                <span class="input-group-text">Immagine</span>
+                            </div>
+            
+                            <!-- buttons radio group -->
+                            <div class="btn-group
+                            " role="group">
+                                <input type="radio" class="btn-check" name="btnradio" id="btnradio1" autocomplete="off" checked>
+                                <label class="btn btn-outline-secondary" for="btnradio1">Disponibile</label>
+                              
+                                <input type="radio" class="btn-check" name="btnradio" id="btnradio2" autocomplete="off">
+                                <label class="btn btn-outline-secondary" for="btnradio2">Esaurito</label>
+                              
+                                <input type="radio" class="btn-check" name="btnradio" id="btnradio3" autocomplete="off">
+                                <label class="btn btn-outline-secondary" for="btnradio3">Fuori produzione</label>
+                              
+                                <input type="radio" class="btn-check" name="btnradio" id="btnradio4" autocomplete="off">
+                                <label class="btn btn-outline-secondary" for="btnradio4">In arrivo</label>
+                            </div>
+                            <!-- / buttons radio group -->
+                        </div>
 
-                <!-- input prezzo -->
-                <div class="mb-3 d-flex flex-wrap flex-md-nowrap">
-                    <span class="w-50 mb-1">Prezzo</span>
-                    <input type="text" class="w-100 form-control text-secondary">
+                        <!-- right column -->
+                        <div class="col mb-3">
+                            <!-- list group with checkbox -->
+                            <ul class="list-group">
+                                <li class="list-group-item">
+                                    <input class="form-check-input me-1" type="checkbox" value="" id="firstCheckbox">
+                                    <label class="form-check-label" for="firstCheckbox">fotocamera principale</label>
+                                    <div class="ps-4 fs-6 text-secondary fw-light">foto di alta qualità e registrare video nitidi</div>
+                                </li>
+                                <li class="list-group-item">
+                                    <input class="form-check-input me-1" type="checkbox" value="" id="secondCheckbox">
+                                    <label class="form-check-label" for="secondCheckbox">schermo OLED</label>
+                                    <div class="ps-4 fs-6 text-secondary fw-light">offre colori nitidi per un'esperienza visiva straordinaria.</div>
+                                </li>
+                                <li class="list-group-item">
+                                    <input class="form-check-input me-1" type="checkbox" value="" id="thirdCheckbox">
+                                    <label class="form-check-label" for="thirdCheckbox">processore Octa-core</label>
+                                    <div class="ps-4 fs-6 text-secondary fw-light">prestazioni fluide e veloci per eseguire le appicazioni più esigenti</div>
+                                </li>
+                                </li>
+                                <li class="list-group-item">
+                                    <input class="form-check-input me-1" type="checkbox" value="" id="thirdCheckbox">
+                                    <label class="form-check-label" for="thirdCheckbox">ricarica wireless</label>
+                                    <div class="ps-4 fs-6 text-secondary fw-light">consente di ricaricare lo smartphone comodamente seza l'uso di cavi</div>
+                                </li>
+                                </li>
+                                <li class="list-group-item">
+                                    <input class="form-check-input me-1" type="checkbox" value="" id="thirdCheckbox">
+                                    <label class="form-check-label" for="thirdCheckbox">connessione 5g</label>
+                                    <div class="ps-4 fs-6 text-secondary fw-light">navigazione ultra veloce e streaming senza interruzioni</div>
+                                </li>
+                                </li>
+                                <li class="list-group-item">
+                                    <input class="form-check-input me-1" type="checkbox" value="" id="thirdCheckbox">
+                                    <label class="form-check-label" for="thirdCheckbox">tecnologia NFC</label>
+                                    <div class="ps-4 fs-6 text-secondary fw-light">per effettuare pagamenti senza contatto</div>
+                                </li>
+                              </ul>
+                            <!-- / list group with checkbox -->
+                        </div>
+                    </div>
+                    <button class="btn btn-primary">Salva</button>
                 </div>
-                
-                <!-- input marca -->
-                <div class="mb-3 d-flex flex-wrap flex-md-nowrap">
-                    <span class="w-50 mb-1">Marca</span>
-                    <select class="w-100 form-select" >
-                        <option selected>--- Seleziona ---</option>
-                        <option value="1">Samsung</option>
-                        <option value="2">Apple</option>
-                        <option value="3">Huawey</option>
-                    </select>
-                </div>
-
-                <!-- description textarea -->
-                <textarea class="form-control mb-3" id="description" rows="4" placeholder="Inserisci la descrizione del prodotto, massimo 1000 caratteri"></textarea>
-
-                <!-- file input -->
-                <div class="input-group mb-3">                    
-                    <input class="form-control" type="file" id="formFile" accept=".png">
-                    <span class="input-group-text">Immagine</span>
-                </div>
-
-                <!-- buttons radio group -->
-                <div class="btn-group" role="group">
-                    <input type="radio" class="btn-check" name="btnradio" id="btnradio1" autocomplete="off" checked>
-                    <label class="btn btn-outline-secondary" for="btnradio1">Disponibile</label>
-                  
-                    <input type="radio" class="btn-check" name="btnradio" id="btnradio2" autocomplete="off">
-                    <label class="btn btn-outline-secondary" for="btnradio2">Esaurito</label>
-                  
-                    <input type="radio" class="btn-check" name="btnradio" id="btnradio2" autocomplete="off">
-                    <label class="btn btn-outline-secondary" for="btnradio3">Fuori produzione</label>
-                  
-                    <input type="radio" class="btn-check" name="btnradio" id="btnradio3" autocomplete="off">
-                    <label class="btn btn-outline-secondary" for="btnradio4">In arrivo</label>
-                </div>
-                <!-- / buttons radio group -->
 
             </form>
 
